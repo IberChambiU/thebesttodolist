@@ -1,0 +1,1 @@
+import{j as t,L as s,O as e}from"./index-0xxKkIKq.js";const i=()=>t.jsxs(t.Fragment,{children:[t.jsx("div",{children:"AuthLayout"}),t.jsx("ul",{children:t.jsx("li",{children:t.jsx(s,{to:"/home",children:"Home"})})}),t.jsx(e,{})]});export{i as AuthLayout,i as default};

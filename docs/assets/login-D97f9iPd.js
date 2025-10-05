@@ -1,0 +1,1 @@
+import{u as r,j as s,M as i,a as u,k as g}from"./index-0xxKkIKq.js";const h=({metaData:t})=>{const{auth:a}=g(),e=r(),{setStorage:n}=u(),o=()=>{n(a,{auth:"true"}),e("/dashboard/users")};return s.jsxs(s.Fragment,{children:[s.jsx(i,{metaData:t}),s.jsx("h1",{children:"LOGIN"}),s.jsx("hr",{}),s.jsx("button",{onClick:o,children:"sign in"})]})};export{h as Login,h as default};
