@@ -1,0 +1,134 @@
+/* Estilos específicos para la página de login */
+
+/* Animación para el icono de login */
+@keyframes float {
+	0%, 100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.login-icon {
+	animation: float 3s ease-in-out infinite;
+}
+
+/* Efectos de hover mejorados para los campos */
+.MuiTextField-root:hover .MuiOutlinedInput-notchedOutline {
+	border-width: 2px !important;
+}
+
+/* Animación de entrada suave */
+.login-container {
+	animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Efectos de partículas de fondo */
+.login-background {
+	position: relative;
+	overflow: hidden;
+}
+
+.login-background::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		radial-gradient(circle at 20% 50%, rgba(25, 118, 210, 0.1) 0%, transparent 50%),
+		radial-gradient(circle at 80% 20%, rgba(25, 118, 210, 0.1) 0%, transparent 50%),
+		radial-gradient(circle at 40% 80%, rgba(25, 118, 210, 0.1) 0%, transparent 50%);
+	animation: moveBackground 15s ease-in-out infinite;
+}
+
+@keyframes moveBackground {
+	0%, 100% {
+		transform: translateX(0) translateY(0);
+	}
+	33% {
+		transform: translateX(-10px) translateY(-10px);
+	}
+	66% {
+		transform: translateX(10px) translateY(10px);
+	}
+}
+
+/* Estilo para el botón de login con efecto de onda */
+.login-button {
+	position: relative;
+	overflow: hidden;
+}
+
+.login-button::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	transition: width 0.6s, height 0.6s;
+}
+
+.login-button:hover::before {
+	width: 300px;
+	height: 300px;
+}
+
+/* Mejorar la apariencia de los campos de input */
+.MuiInputAdornment-root .MuiSvgIcon-root {
+	transition: color 0.3s ease;
+}
+
+.MuiTextField-root:focus-within .MuiInputAdornment-root .MuiSvgIcon-root {
+	color: #1976d2 !important;
+}
+
+/* Efectos de sombra mejorados para el card */
+.MuiPaper-root {
+	transition: box-shadow 0.3s ease !important;
+}
+
+.MuiPaper-root:hover {
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Estilos para el chip de navegación al home */
+.MuiChip-root {
+	text-decoration: none !important;
+}
+
+.MuiChip-root:hover .MuiChip-icon {
+	transform: scale(1.1);
+	transition: transform 0.2s ease;
+}
+
+/* Animación sutil para el icono del home */
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+.home-chip:hover {
+	animation: pulse 2s ease-in-out infinite;
+}

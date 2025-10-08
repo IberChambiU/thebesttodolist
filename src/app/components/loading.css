@@ -1,0 +1,155 @@
+/* Estilos específicos para el componente Loading */
+
+/* Animación de entrada suave para el overlay */
+.loading-overlay {
+	animation: fadeInOverlay 0.3s ease-out;
+}
+
+@keyframes fadeInOverlay {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Animación de escalado para el contenedor principal */
+.loading-container {
+	animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Mejora del efecto glassmorphism */
+.loading-glass {
+	backdrop-filter: blur(20px) saturate(180%);
+	-webkit-backdrop-filter: blur(20px) saturate(180%);
+	background: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Tema oscuro para el glassmorphism */
+.loading-glass-dark {
+	backdrop-filter: blur(20px) saturate(180%);
+	-webkit-backdrop-filter: blur(20px) saturate(180%);
+	background: rgba(17, 25, 40, 0.85);
+	border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Animación de rotación mejorada */
+@keyframes spin-smooth {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin-reverse-smooth {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+/* Efecto de brillo en el texto */
+.loading-title {
+	position: relative;
+	overflow: hidden;
+}
+
+.loading-title::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.4),
+		transparent
+	);
+	animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+
+/* Efecto de ondas en el fondo */
+.loading-waves {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: 
+		radial-gradient(circle at 30% 20%, rgba(25, 118, 210, 0.1) 0%, transparent 50%),
+		radial-gradient(circle at 70% 80%, rgba(25, 118, 210, 0.1) 0%, transparent 50%);
+	animation: moveWaves 8s ease-in-out infinite;
+	pointer-events: none;
+}
+
+@keyframes moveWaves {
+	0%, 100% {
+		transform: translateX(0) translateY(0);
+	}
+	25% {
+		transform: translateX(-10px) translateY(-10px);
+	}
+	50% {
+		transform: translateX(10px) translateY(10px);
+	}
+	75% {
+		transform: translateX(-5px) translateY(5px);
+	}
+}
+
+/* Versiones responsive del loading */
+@media (max-width: 600px) {
+	.loading-container {
+		margin: 0 16px;
+		min-width: 280px;
+	}
+	
+	.loading-title {
+		font-size: 1.2rem !important;
+	}
+}
+
+/* Estados hover para interactividad sutil */
+.loading-container:hover {
+	transform: scale(1.02);
+	transition: transform 0.3s ease;
+}
+
+/* Mejora de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+	.loading-container,
+	.loading-overlay,
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

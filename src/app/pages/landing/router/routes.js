@@ -15,20 +15,20 @@ export const routes = [
 		element: Home,
 		metaData: index,
 	},
-	{
-		path: '/product/:id',
-		element: Product,
-		loader: productLoader,
-		metaData: product,
-	},
+	// {
+	// 	path: '/product/:id',
+	// 	element: Product,
+	// 	loader: productLoader,
+	// 	metaData: product,
+	// },
 	{
 		path: '/contact',
 		element: Contact,
 		metaData: contact,
 	},
-	{
+	/* {
 		path: '/about',
 		element: About,
 		metaData: about,
-	},
+	}, */
 ]
