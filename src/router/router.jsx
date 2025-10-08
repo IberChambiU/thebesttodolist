@@ -12,7 +12,7 @@ import { basePath } from '../provider/api/api';
 
 const baseRoute = '/home';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
 	[
 		{
 			errorElement: <Error404 />,

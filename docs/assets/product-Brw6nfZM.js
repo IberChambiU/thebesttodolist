@@ -1,0 +1,1 @@
+import{af as t,j as s,ab as o}from"./index-CP91G1nj.js";const n=({metaData:a})=>{const{params:r}=t();return console.log("params",r),s.jsxs(s.Fragment,{children:[s.jsx(o,{metaData:a}),s.jsx("br",{}),s.jsx("p",{children:"product"})]})};export{n as Product,n as default};
